@@ -1,1 +1,61 @@
-ne bakıyon kardeş
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Gazi Yiğit Ünal – Topuzun Efendisi</title>
+<style>
+    body {
+        background: #111;
+        color: #fff;
+        font-family: "Comic Sans MS", cursive;
+        text-align: center;
+        padding-top: 60px;
+        overflow-x: hidden;
+    }
+    h1 {
+        font-size: 3rem;
+        animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+        from { text-shadow: 0 0 10px #ff00ea; }
+        to   { text-shadow: 0 0 25px #00eaff; }
+    }
+    .topuz {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: radial-gradient(circle, #c49b63, #8b6232);
+        margin: 40px auto;
+        animation: rotate 5s linear infinite;
+        position: relative;
+    }
+    @keyframes rotate {
+        0%   { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    .aura {
+        position: absolute;
+        top: -30px; left: -30px;
+        width: 260px; height: 260px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.1);
+        filter: blur(10px);
+        animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+        0%   { transform: scale(1); opacity: .3; }
+        50%  { transform: scale(1.15); opacity: .6; }
+        100% { transform: scale(1); opacity: .3; }
+    }
+    .yazi {
+        font-size: 1.3rem;
+        margin-top: 20px;
+        animation: slide 2s ease-out;
+    }
+    @keyframes slide {
+        from { opacity: 0; transform: translateY(40px);}
+        to   { opacity: 1; transform: translateY(0);}
+    }
+    button {
+        margin-top: 25px;
+        padding: 12px 25px;
