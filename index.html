@@ -5,7 +5,7 @@
 <title>Gazi Yiğit Ünal - Topuz Efsanesi</title>
 <style>
     body {
-        background: radial-gradient(circle at center, #ffdd00, #ff8800, #ff0066);
+        background: linear-gradient(135deg, #ffdd00, #ff8800, #ff0066);
         font-family: 'Comic Sans MS', cursive;
         color: #fff;
         text-align: center;
@@ -18,6 +18,7 @@
         font-size: 60px;
         text-shadow: 4px 4px 10px #000;
         animation: glow 2s infinite alternate;
+        margin-top: 20px;
     }
 
     @keyframes glow {
@@ -25,20 +26,27 @@
         to   { text-shadow: 0 0 40px #ff0; }
     }
 
-    .topuz {
-        margin: 40px auto;
-        width: 250px;
-        height: 250px;
-        background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Fancy_Hair_Bun.png/240px-Fancy_Hair_Bun.png');
-        background-size: cover;
+    .photo {
+        width: 260px;
+        height: 260px;
         border-radius: 50%;
-        box-shadow: 0 0 40px #fff;
-        animation: spin 5s linear infinite;
+        overflow: hidden;
+        margin: 20px auto;
+        box-shadow: 0 0 40px #000;
+        border: 4px solid #fff;
+        animation: float 3s ease-in-out infinite;
     }
 
-    @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+    .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-15px); }
+        100% { transform: translateY(0); }
     }
 
     .card {
@@ -63,6 +71,7 @@
         font-weight: bold;
         cursor: pointer;
         animation: pulse 1.5s infinite;
+        margin-bottom: 20px;
     }
 
     @keyframes pulse {
@@ -87,6 +96,27 @@
         80% { color: blue; }
         100% { color: purple; }
     }
+
+    /* Yeni özellikler */
+    .shine {
+        margin-top: 30px;
+        font-size: 30px;
+        font-weight: bold;
+        animation: shineAnim 3s infinite;
+    }
+
+    @keyframes shineAnim {
+        0% { opacity: 0; }
+        50% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+
+    .footer {
+        margin-top: 60px;
+        padding: 20px;
+        font-size: 20px;
+        background: rgba(0,0,0,0.3);
+    }
 </style>
 </head>
 
@@ -95,14 +125,16 @@
 <h1>GAZİ YİĞİT ÜNAL</h1>
 <h2>TOPUZUN EFENDİSİ</h2>
 
-<div class="topuz"></div>
+<div class="photo">
+    <img src="user_photo.jpg" alt="Gazi Yiğit Ünal Fotoğrafı">
+</div>
 
 <div class="card">
-    <p>Gazi Yiğit Ünal, yalnızca bir insan değildir…  
-    O, **topuzun yaşayan efsanesi**, rüzgâr estiğinde bile şekli bozulmayan o mucizevi yapının taşıyıcısıdır.</p>
+    <p>Gazi Yiğit Ünal, yalnızca bir insan değildir…<br>
+    O, <b>topuzun yaşayan efsanesi</b>, rüzgâr estiğinde bile şekli bozulmayan o mucizevi yapının taşıyıcısıdır.</p>
 
-    <p>Bilim adamları bir araya gelip “Bu nasıl bir topuzdur?” diye araştırmalar yapmış,  
-    fakat **topuzun ihtişamını açıklayacak bir teori bulamamışlardır.**</p>
+    <p>Bilim adamları bir araya gelip “Bu nasıl bir topuzdur?” diye araştırmalar yapmış,
+    fakat <b>topuzun ihtişamını açıklayacak bir teori bulamamışlardır.</b></p>
 </div>
 
 <button onclick="document.getElementById('surprise').style.display='block'">
@@ -111,5 +143,10 @@
 
 <div id="surprise">✨ TOPUZ KUTSALDIR! ✨</div>
 
+<div class="shine">⚡ Efsane Güç Aktif Edildi ⚡</div>
+
+<div class="footer">© 2025 Tüm Topuz Hakları Saklıdır</div>
+
 </body>
 </html>
+
