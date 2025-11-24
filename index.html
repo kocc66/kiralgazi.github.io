@@ -2,60 +2,114 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>Gazi Yiğit Ünal – Topuzun Efendisi</title>
+<title>Gazi Yiğit Ünal - Topuz Efsanesi</title>
 <style>
     body {
-        background: #111;
+        background: radial-gradient(circle at center, #ffdd00, #ff8800, #ff0066);
+        font-family: 'Comic Sans MS', cursive;
         color: #fff;
-        font-family: "Comic Sans MS", cursive;
         text-align: center;
-        padding-top: 60px;
+        margin: 0;
+        padding: 0;
         overflow-x: hidden;
     }
+
     h1 {
-        font-size: 3rem;
+        font-size: 60px;
+        text-shadow: 4px 4px 10px #000;
         animation: glow 2s infinite alternate;
     }
+
     @keyframes glow {
-        from { text-shadow: 0 0 10px #ff00ea; }
-        to   { text-shadow: 0 0 25px #00eaff; }
+        from { text-shadow: 0 0 20px #fff; }
+        to   { text-shadow: 0 0 40px #ff0; }
     }
+
     .topuz {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        background: radial-gradient(circle, #c49b63, #8b6232);
         margin: 40px auto;
-        animation: rotate 5s linear infinite;
-        position: relative;
+        width: 250px;
+        height: 250px;
+        background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Fancy_Hair_Bun.png/240px-Fancy_Hair_Bun.png');
+        background-size: cover;
+        border-radius: 50%;
+        box-shadow: 0 0 40px #fff;
+        animation: spin 5s linear infinite;
     }
-    @keyframes rotate {
-        0%   { transform: rotate(0deg); }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
     }
-    .aura {
-        position: absolute;
-        top: -30px; left: -30px;
-        width: 260px; height: 260px;
-        border-radius: 50%;
-        background: rgba(255,255,255,0.1);
-        filter: blur(10px);
-        animation: pulse 2s infinite;
+
+    .card {
+        width: 80%;
+        margin: 40px auto;
+        padding: 30px;
+        background: rgba(255,255,255,0.2);
+        border-radius: 25px;
+        backdrop-filter: blur(8px);
+        box-shadow: 0 0 30px #000;
+        font-size: 22px;
+        line-height: 1.5;
     }
-    @keyframes pulse {
-        0%   { transform: scale(1); opacity: .3; }
-        50%  { transform: scale(1.15); opacity: .6; }
-        100% { transform: scale(1); opacity: .3; }
-    }
-    .yazi {
-        font-size: 1.3rem;
-        margin-top: 20px;
-        animation: slide 2s ease-out;
-    }
-    @keyframes slide {
-        from { opacity: 0; transform: translateY(40px);}
-        to   { opacity: 1; transform: translateY(0);}
-    }
+
     button {
-        margin-top: 25px;
-        padding: 12px 25px;
+        padding: 20px 40px;
+        font-size: 26px;
+        border: none;
+        border-radius: 15px;
+        background: #fff;
+        color: #ff0066;
+        font-weight: bold;
+        cursor: pointer;
+        animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+
+    #surprise {
+        margin-top: 30px;
+        font-size: 40px;
+        display: none;
+        animation: rainbow 1s infinite;
+        font-weight: bold;
+    }
+
+    @keyframes rainbow {
+        0% { color: red; }
+        20% { color: orange; }
+        40% { color: yellow; }
+        60% { color: green; }
+        80% { color: blue; }
+        100% { color: purple; }
+    }
+</style>
+</head>
+
+<body>
+
+<h1>GAZİ YİĞİT ÜNAL</h1>
+<h2>TOPUZUN EFENDİSİ</h2>
+
+<div class="topuz"></div>
+
+<div class="card">
+    <p>Gazi Yiğit Ünal, yalnızca bir insan değildir…  
+    O, **topuzun yaşayan efsanesi**, rüzgâr estiğinde bile şekli bozulmayan o mucizevi yapının taşıyıcısıdır.</p>
+
+    <p>Bilim adamları bir araya gelip “Bu nasıl bir topuzdur?” diye araştırmalar yapmış,  
+    fakat **topuzun ihtişamını açıklayacak bir teori bulamamışlardır.**</p>
+</div>
+
+<button onclick="document.getElementById('surprise').style.display='block'">
+    TOPUZUN GİZEMİNİ AÇ!
+</button>
+
+<div id="surprise">✨ TOPUZ KUTSALDIR! ✨</div>
+
+</body>
+</html>
